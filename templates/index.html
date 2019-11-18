@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<title> File Server </title>
+</head>
+
+<body>
+<h1> File Server </h1>
+
+<button onclick=download()>Download </button>
+<br>
+<br>
+ <form action = "/upload" method = "post" enctype="multipart/form-data" id="myform">  
+        <input type="file" name="file" onchange = "submit()" multiple/>  
+    </form>  
+
+
+<script>
+function download(){
+    var url = window.location.href + "download";
+    window.location.href=url
+    
+}
+
+function submit(){
+    var myform = document.getElementById("myform");
+    myform().submit()
+}
+
+
+</script>
+</body>
+
+</html>
